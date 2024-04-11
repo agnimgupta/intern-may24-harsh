@@ -1,0 +1,178 @@
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #353535;
+}
+
+.loader {
+  background-color: #353535;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s all ease;
+  z-index: 10;
+}
+
+.heading h1 {
+  opacity: 0.3;
+  font-size: 10vw;
+  color: #fff;
+}
+
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  width: -moz-max-content;
+  width: max-content;
+  left: 2%;
+  bottom: 10%;
+}
+
+.loader .hidden h1 {
+  font-size: 8vw;
+  transform: translateY(50px);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+main .navbar {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .navbar .logo a {
+  font-size: 2vw;
+  font-weight: 500;
+}
+main .navbar .logo #highlight {
+  color: #4787e8;
+  font-size: 3rem;
+}
+main .navbar .menu-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .navbar .menu-links .menu-item {
+  margin-right: 2rem;
+  font-weight: 600;
+  overflow: hidden;
+  height: 40px;
+  padding: 0.5rem;
+}
+main .navbar .menu-links .menu-item .menu-link {
+  display: flex;
+  flex-direction: column;
+}
+main .navbar .menu-links .menu-item .menu-link a {
+  font-size: 22px;
+}
+main .navbar .contactBtn {
+  background-color: #4787e8;
+  color: #fff;
+  padding: 0.5rem;
+  margin-right: none;
+  display: flex;
+  flex-direction: column;
+}
+main .navbar .contactBtn .menu-item {
+  margin-right: none;
+  font-weight: 600;
+  overflow: hidden;
+  height: 48px;
+  padding: 0.5rem;
+}
+main .navbar .contactBtn .menu-item .menu-link {
+  display: flex;
+  flex-direction: column;
+}
+main .navbar .contactBtn .menu-item .menu-link a {
+  font-size: 22px;
+  color: white;
+}
+main .home {
+  width: 100%;
+  height: calc(100vh - 100px);
+  flex-direction: column;
+  padding: 2rem;
+}
+main .home h3 {
+  font-size: 3vw;
+  font-weight: 400;
+}
+main .home h1 {
+  font-size: 3vw;
+}
+main .home h4 {
+  font-size: 3vw;
+  font-weight: 400;
+}/*# sourceMappingURL=index.css.map */
