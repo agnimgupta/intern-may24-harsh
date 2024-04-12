@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,12 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
 
 </head>
+
 <body>
 
     <!-- <section id="loader" class="loader">
@@ -23,10 +26,48 @@
     </section> -->
 
     <main>
+        <!-- <svg id="curveLines" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800">
+            <defs>
+                <linearGradient gradientTransform="rotate(270)" x1="50%" y1="0%" x2="50%" y2="100%"
+                    id="sssquiggly-grad">
+                    <stop stop-color="hsl(206, 75%, 49%)" stop-opacity="1" offset="0%"></stop>
+                    <stop stop-color="hsl(331, 90%, 56%)" stop-opacity="1" offset="100%"></stop>
+                </linearGradient>
+            </defs>
+            <g stroke-width="1.5" stroke="url(#sssquiggly-grad)" fill="none" stroke-linecap="round"
+                transform="matrix(1,0,0,1,-5,-123.48990249633789)">
+                
+                <path
+                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
+                    transform="matrix(1,0,0,1,0,648)"></path>
+                <path
+                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
+                    transform="matrix(1,0,0,1,0,594)"></path>
+                <path
+                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
+                    transform="matrix(1,0,0,1,0,540)"></path>
+                <path
+                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
+                    transform="matrix(1,0,0,1,0,486)"></path>
+                <path
+                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
+                    transform="matrix(1,0,0,1,0,432)"></path>
+                <path
+                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
+                    transform="matrix(1,0,0,1,0,378)"></path>
+                <path
+                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
+                    transform="matrix(1,0,0,1,0,324)"></path>
+            </g>
+        </svg> -->
+
+
         <nav class="navbar section" id="navbar">
             <div class="logo">
                 <i class="menu-icon"></i>
-                <a href="#"><span class="company-name">Xoon<span id="highlight">I</span>nfotech</span></a>
+                <img src="./images/Frame 10.png" alt="">
+                <!-- <a href="#"><span class="company-name">Xoon<span id="highlight">I</span>nfotech</span></a> -->
             </div>
             <div class="menu-links">
                 <div class="menu-item ">
@@ -53,18 +94,8 @@
                         <a href="#"><span>Teams</span></a>
                     </div>
                 </div>
-                <div class="menu-item">
-                    <div class="menu-link">
-                        <a href="#"><span>Careers</span></a>
-                        <a href="#"><span>Careers</span></a>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-link">
-                        <a href="#"><span>Contact Us</span></a>
-                        <a href="#"><span>Contact Us</span></a>
-                    </div>
-                </div>
+
+
             </div>
             <div class="contactBtn">
                 <div class="menu-item">
@@ -74,21 +105,150 @@
                     </div>
                 </div>
             </div>
+
+
+           
         </nav>
-    
+
+      
         <div class="home flex" id="home">
-            <div class="leftHome">
+            <div class="homeLeft">
                 <h3>Welcome to</h1>
-                <h1>Xoon Infotech</h1>
-                <h4>We provide best quality of digital products.</h4>
+                    <h1>Xoon <span id="highlight">I</span>nfotech</h1>
+                    <h4>We provide <span id="highlightText">best quality</span> of digital products.</h4>
+
+                    <div class="button">
+                        <div class="btnContent flex">
+                            <a href="">Get in touch</a>
+                            <img src="./images/arrow-right-up-svgrepo-com.svg" alt="">
+                        </div>
+                        
+                    </div>
+
             </div>
-            <div class="rightHome">
-                <!-- <img src="./images/2842680.jpg" alt=""> -->
+            <div class="homeRight flex">
+
+                <img src="./images/2842680.jpg" alt="">
             </div>
+            <svg id="bubble" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" opacity="0.73" width="800" height="800">
+            <g stroke-width="3.75" stroke="hsla(227, 69%, 60%, 1.00)" fill="none">
+                <circle r="7.631578947368421" cx="0" cy="0" fill="none"></circle>
+                <circle r="7.631578947368421" cx="100" cy="0" fill="none"></circle>
+                <circle r="7.631578947368421" cx="200" cy="0" fill="none"></circle>
+                <circle r="7.631578947368421" cx="300" cy="0" fill="none"></circle>
+                <circle r="7.631578947368421" cx="400" cy="0" fill="none"></circle>
+                <circle r="7.631578947368421" cx="500" cy="0" fill="none"></circle>
+                <circle r="7.631578947368421" cx="600" cy="0" fill="none"></circle>
+                <circle r="7.631578947368421" cx="700" cy="0" fill="none"></circle>
+                <circle r="7.631578947368421" cx="800" cy="0" fill="none"></circle>
+                <circle r="7.631578947368421" cx="0" cy="80" fill="none"></circle>
+                <circle r="7.631578947368421" cx="100" cy="80" fill="none"></circle>
+                <circle r="7.631578947368421" cx="200" cy="80" fill="none"></circle>
+                <circle r="7.631578947368421" cx="300" cy="80" fill="none"></circle>
+                <circle r="7.631578947368421" cx="400" cy="80" fill="none"></circle>
+                <circle r="7.631578947368421" cx="500" cy="80" fill="none"></circle>
+                <circle r="7.631578947368421" cx="600" cy="80" fill="none"></circle>
+                <circle r="7.631578947368421" cx="700" cy="80" fill="none"></circle>
+                <circle r="7.631578947368421" cx="800" cy="80" fill="none"></circle>
+                <circle r="7.631578947368421" cx="0" cy="160" fill="none"></circle>
+                <circle r="7.631578947368421" cx="100" cy="160" fill="none"></circle>
+                <circle r="7.631578947368421" cx="200" cy="160" fill="none"></circle>
+                <circle r="7.631578947368421" cx="300" cy="160" fill="none"></circle>
+                <circle r="7.631578947368421" cx="400" cy="160" fill="none"></circle>
+                <circle r="7.631578947368421" cx="500" cy="160" fill="none"></circle>
+                <circle r="7.631578947368421" cx="600" cy="160" fill="none"></circle>
+                <circle r="7.631578947368421" cx="700" cy="160" fill="none"></circle>
+                <circle r="7.631578947368421" cx="800" cy="160" fill="none"></circle>
+                <circle r="7.631578947368421" cx="0" cy="240" fill="none"></circle>
+                <circle r="7.631578947368421" cx="100" cy="240" fill="none"></circle>
+                <circle r="7.631578947368421" cx="200" cy="240" fill="none"></circle>
+                <circle r="7.631578947368421" cx="300" cy="240" fill="none"></circle>
+                <circle r="7.631578947368421" cx="400" cy="240" fill="none"></circle>
+                <circle r="7.631578947368421" cx="500" cy="240" fill="none"></circle>
+                <circle r="7.631578947368421" cx="600" cy="240" fill="none"></circle>
+                <circle r="7.631578947368421" cx="700" cy="240" fill="none"></circle>
+                <circle r="7.631578947368421" cx="800" cy="240" fill="none"></circle>
+                <circle r="7.631578947368421" cx="0" cy="320" fill="none"></circle>
+                <circle r="7.631578947368421" cx="100" cy="320" fill="none"></circle>
+                <circle r="7.631578947368421" cx="200" cy="320" fill="none"></circle>
+                <circle r="7.631578947368421" cx="300" cy="320" fill="none"></circle>
+                <circle r="7.631578947368421" cx="400" cy="320" fill="none"></circle>
+                <circle r="7.631578947368421" cx="500" cy="320" fill="none"></circle>
+                <circle r="7.631578947368421" cx="600" cy="320" fill="none"></circle>
+                <circle r="7.631578947368421" cx="700" cy="320" fill="none"></circle>
+                <circle r="7.631578947368421" cx="800" cy="320" fill="none"></circle>
+                <circle r="7.631578947368421" cx="0" cy="400" fill="none"></circle>
+                <circle r="7.631578947368421" cx="100" cy="400" fill="none"></circle>
+                <circle r="7.631578947368421" cx="200" cy="400" fill="none"></circle>
+                <circle r="7.631578947368421" cx="300" cy="400" fill="none"></circle>
+                <circle r="7.631578947368421" cx="400" cy="400" fill="none"></circle>
+                <circle r="7.631578947368421" cx="500" cy="400" fill="none"></circle>
+                <circle r="7.631578947368421" cx="600" cy="400" fill="none"></circle>
+                <circle r="7.631578947368421" cx="700" cy="400" fill="none"></circle>
+                <circle r="7.631578947368421" cx="800" cy="400" fill="none"></circle>
+                <circle r="7.631578947368421" cx="0" cy="480" fill="none"></circle>
+                <circle r="7.631578947368421" cx="100" cy="480" fill="none"></circle>
+                <circle r="7.631578947368421" cx="200" cy="480" fill="none"></circle>
+                <circle r="7.631578947368421" cx="300" cy="480" fill="none"></circle>
+                <circle r="7.631578947368421" cx="400" cy="480" fill="none"></circle>
+                <circle r="7.631578947368421" cx="500" cy="480" fill="none"></circle>
+                <circle r="7.631578947368421" cx="600" cy="480" fill="none"></circle>
+                <circle r="7.631578947368421" cx="700" cy="480" fill="none"></circle>
+                <circle r="7.631578947368421" cx="800" cy="480" fill="none"></circle>
+                <circle r="7.631578947368421" cx="0" cy="560" fill="none"></circle>
+                <circle r="7.631578947368421" cx="100" cy="560" fill="none"></circle>
+                <circle r="7.631578947368421" cx="200" cy="560" fill="none"></circle>
+                <circle r="7.631578947368421" cx="300" cy="560" fill="none"></circle>
+                <circle r="7.631578947368421" cx="400" cy="560" fill="none"></circle>
+                <circle r="7.631578947368421" cx="500" cy="560" fill="none"></circle>
+                <circle r="7.631578947368421" cx="600" cy="560" fill="none"></circle>
+                <circle r="7.631578947368421" cx="700" cy="560" fill="none"></circle>
+                <circle r="7.631578947368421" cx="800" cy="560" fill="none"></circle>
+                <circle r="7.631578947368421" cx="0" cy="640" fill="none"></circle>
+                <circle r="7.631578947368421" cx="100" cy="640" fill="none"></circle>
+                <circle r="7.631578947368421" cx="200" cy="640" fill="none"></circle>
+                <circle r="7.631578947368421" cx="300" cy="640" fill="none"></circle>
+                <circle r="7.631578947368421" cx="400" cy="640" fill="none"></circle>
+                <circle r="7.631578947368421" cx="500" cy="640" fill="none"></circle>
+                <circle r="7.631578947368421" cx="600" cy="640" fill="none"></circle>
+                <circle r="7.631578947368421" cx="700" cy="640" fill="none"></circle>
+                <circle r="7.631578947368421" cx="800" cy="640" fill="none"></circle>
+                <circle r="7.631578947368421" cx="0" cy="720" fill="none"></circle>
+                <circle r="7.631578947368421" cx="100" cy="720" fill="none"></circle>
+                <circle r="7.631578947368421" cx="200" cy="720" fill="none"></circle>
+                <circle r="7.631578947368421" cx="300" cy="720" fill="none"></circle>
+                <circle r="7.631578947368421" cx="400" cy="720" fill="none"></circle>
+                <circle r="7.631578947368421" cx="500" cy="720" fill="none"></circle>
+                <circle r="7.631578947368421" cx="600" cy="720" fill="none"></circle>
+                <circle r="7.631578947368421" cx="700" cy="720" fill="none"></circle>
+                <circle r="7.631578947368421" cx="800" cy="720" fill="none"></circle>
+                <circle r="7.631578947368421" cx="0" cy="800" fill="none"></circle>
+                <circle r="7.631578947368421" cx="100" cy="800" fill="none"></circle>
+                <circle r="7.631578947368421" cx="200" cy="800" fill="none"></circle>
+                <circle r="7.631578947368421" cx="300" cy="800" fill="none"></circle>
+                <circle r="7.631578947368421" cx="400" cy="800" fill="none"></circle>
+                <circle r="7.631578947368421" cx="500" cy="800" fill="none"></circle>
+                <circle r="7.631578947368421" cx="600" cy="800" fill="none"></circle>
+                <circle r="7.631578947368421" cx="700" cy="800" fill="none"></circle>
+                <circle r="7.631578947368421" cx="800" cy="800" fill="none"></circle>
+            </g>
+        </svg>
+
         </div>
+
+
+        <div class="about" id="about">
+            
+        </div>
+
+        
+
+
     </main>
 
     <script src="./script.js"></script>
 
 </body>
+
 </html>
