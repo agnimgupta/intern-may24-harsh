@@ -124,8 +124,13 @@ a {
 
 main {
   width: 100%;
+  min-height: 120vh;
   overflow: hidden;
   position: relative;
+}
+main .swiper {
+  width: 600px;
+  height: 300px;
 }
 main .button {
   background-color: #4787e8;
@@ -275,7 +280,7 @@ main #hamburger-menu,
 main #mobile-menu {
   display: none;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   main #mobile-menu {
     background-color: #0b2545;
     width: 100%;
@@ -525,9 +530,49 @@ main .about {
   min-height: 70vh;
   color: #fff;
   position: relative;
-  padding: 3rem 1rem;
+  padding: 7rem 0rem;
   flex-direction: column;
   justify-content: space-between;
+}
+main .about .mission {
+  background-color: #4787e8;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1024px) {
+  main .about .mission {
+    flex-direction: row;
+  }
+}
+main .about .mission .leftMission {
+  width: 100%;
+  justify-content: center;
+  margin: 2rem 0rem;
+}
+@media only screen and (min-width: 1024px) {
+  main .about .mission .leftMission {
+    width: 20%;
+    justify-content: flex-start;
+  }
+}
+main .about .mission .rightMission {
+  width: 100%;
+  padding: 1rem;
+  text-align: justify;
+}
+main .about .mission .rightMission p {
+  font-size: 18px;
+}
+@media only screen and (min-width: 1024px) {
+  main .about .mission .rightMission {
+    width: 60%;
+    justify-content: flex-start;
+  }
+}
+main .about :nth-child(4) {
+  background-color: #666;
 }
 main .aboutContainer {
   display: flex;
@@ -535,6 +580,7 @@ main .aboutContainer {
   align-items: center;
   flex-direction: column-reverse;
   padding: 0rem 1rem;
+  margin-bottom: 5rem;
 }
 @media only screen and (min-width: 1024px) {
   main .aboutContainer {
@@ -715,7 +761,7 @@ main .projects {
   flex-direction: column;
   background-color: white;
   border-radius: 0px 0px 50px 50px;
-  padding: 2rem 1rem;
+  padding: 7rem 1rem;
 }
 @media only screen and (min-width: 1024px) {
   main .projects .project-container:nth-child(even) {
@@ -775,19 +821,21 @@ main .projects .project-info p {
 main .blog {
   display: grid;
   place-items: center;
-  min-height: 80vh;
-  padding: 2rem 1rem;
+  min-height: 100vh;
+  padding: 7rem 1rem;
 }
 main .blog .heading {
   color: #fff;
 }
 main .blog .blogContainer {
+  margin: 2rem 0rem;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   justify-content: center;
-  max-width: 1200px;
-  margin-block: 2rem;
   gap: 2rem;
+  overflow: hidden;
+  position: relative;
 }
 main .blog .blogContainer img {
   max-width: 100%;
@@ -795,54 +843,109 @@ main .blog .blogContainer img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .blog .blogContainer .card {
+@media only screen and (min-width: 1024px) {
+  main .blog .blogContainer {
+    width: 70%;
+  }
+}
+main .blog .blogContainer .slider {
+  position: relative;
+  width: 100%;
+}
+main .blog .blogContainer .slider .slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+main .blog .blogContainer .slider .slides .card {
   display: flex;
   flex-direction: column;
   width: clamp(20rem, 20rem + 2vw, 22rem);
   overflow: hidden;
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 1em;
+  margin: 1rem;
   background: #ece9e6;
+  min-width: 350px;
   background: linear-gradient(to right, #ffffff, #ece9e6);
 }
-main .blog .blogContainer .card .cardBody {
+main .blog .blogContainer .slider .slides .card .cardBody {
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-main .blog .blogContainer .card .cardBody .tag {
+main .blog .blogContainer .slider .slides .card .cardBody .tag {
   align-self: flex-start;
   padding: 0.25em 0.75em;
   border-radius: 1em;
   font-size: 0.75rem;
 }
-main .blog .blogContainer .card .cardBody .tag + .tag {
+main .blog .blogContainer .slider .slides .card .cardBody .tag + .tag {
   margin-left: 0.5em;
 }
-main .blog .blogContainer .card .cardBody .tag-blue {
+main .blog .blogContainer .slider .slides .card .cardBody .tag-blue {
   background: #56ccf2;
   background: linear-gradient(to bottom, #2f80ed, #1081a6);
   color: #fafafa;
 }
-main .blog .blogContainer .card .cardBody .cardBody h4 {
+main .blog .blogContainer .slider .slides .card .cardBody .cardBody h4 {
   font-size: 1.5rem;
   text-transform: capitalize;
 }
-main .blog .blogContainer .card .cardFooter {
+main .blog .blogContainer .slider .slides .card .cardFooter {
   display: flex;
   padding: 1rem;
   margin-top: auto;
 }
-main .blog .blogContainer .card .cardFooter .user {
+main .blog .blogContainer .slider .slides .card .cardFooter .user {
   display: flex;
   gap: 0.5rem;
 }
-main .blog .blogContainer .card .cardFooter .userImage {
+main .blog .blogContainer .slider .slides .card .cardFooter .userImage {
   border-radius: 50%;
 }
-main .blog .blogContainer .card .cardFooter .userInfo > small {
+main .blog .blogContainer .slider .slides .card .cardFooter .userInfo > small {
   color: #666;
+}
+main .blog .blogContainer .button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+main .blog .blogContainer .button button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+main .blog .blogContainer .button button i {
+  font-size: 20px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #4787e8;
+  color: #fff;
+  z-index: 10;
+}
+@media only screen and (min-width: 1024px) {
+  main .blog .blogContainer .button button i {
+    font-size: 40px;
+    padding: 0.5rem;
+  }
+}
+main .blog .blogContainer .button button:hover {
+  color: #000;
+}
+main .blog .blogContainer .button button.prev {
+  left: 0;
+}
+main .blog .blogContainer .button button.next {
+  right: 0;
 }
 main .contact {
   width: 100%;
