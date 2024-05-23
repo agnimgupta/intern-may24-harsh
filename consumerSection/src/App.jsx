@@ -1,13 +1,41 @@
-import './App.css'
-import React from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import Home from './components/Home';
+// import About from './components/About';
+import FindDoctor from './components/FindDoctor';
+import Navbar from './components/Navbar';
+import Banner from './components/Banner';
+import Sidebar from './components/Sidebar';
+import Payment from './components/Payment';
+import Chats from './components/Chats'
+import Container from './components/Container';
 function App() {
-
-
   return (
-    <>
-      <h1 className='bg-slate-600 text-5xl'>kain</h1>
-    </>
-  )
+    <Router>
+      <div>
+        <Navbar />
+        <div className="relative">
+          <Banner name="Priya" />
+
+          <div className="wrapper w-[100%] flex justify-start items-start">
+            <Sidebar />
+            <Container >
+              <Routes>
+                {/* <Route path="/" element={<Home />} /> */}
+                {/* <Route path="/about" element={<About />} /> */}
+                <Route path="/find-doctor" element={<FindDoctor />} />
+
+                <Route path="/payment" element={<Payment />} />
+                <Route path="/chat" element={<Chats />} />
+
+              </Routes>
+            </Container>
+
+          </div>
+        </div>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

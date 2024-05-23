@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+:root{
+    --primary: #3A643B;
+}
+
+.dropdown-enter-active,
+.dropdown-leave-active {
+  transition: opacity 0.2s;
+}
+
+.dropdown-enter,
+.dropdown-leave-to {
+  opacity: 0;
+}
+
+.icons{
+    width: 30px;
+    height: auto;
+    object-fit: cover;
+}
+.bigIcons{
+    width: 60px;
+    height: auto;
+    object-fit: cover;
+}
+
+.links{
+    font-size: 20px;
+    color: black;
+
+}
+.flexClass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexEnd{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+.flexColClass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.rotateIcon{
+    transition: .2s all ease-in;
+    transform: rotate(180deg);
+}

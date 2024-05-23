@@ -1,0 +1,1 @@
+${isDropdownOpen ? "rotate" : "null"}
