@@ -9,6 +9,7 @@ import Sidebar from './components/Sidebar';
 import Payment from './components/Payment';
 import Chats from './components/Chats'
 import Container from './components/Container';
+import Routines from './components/Routines';
 function App() {
   return (
     <Router>
@@ -22,9 +23,8 @@ function App() {
             <Container >
               <Routes>
                 {/* <Route path="/" element={<Home />} /> */}
-                {/* <Route path="/about" element={<About />} /> */}
                 <Route path="/find-doctor" element={<FindDoctor />} />
-
+                <Route path="/routines" element={<Routines />} />
                 <Route path="/payment" element={<Payment />} />
                 <Route path="/chat" element={<Chats />} />
 
