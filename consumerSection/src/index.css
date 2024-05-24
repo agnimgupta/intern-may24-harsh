@@ -20,7 +20,7 @@
 }
 
 .icons{
-    width: 30px;
+    width: 25px;
     height: auto;
     object-fit: cover;
 }
@@ -54,4 +54,13 @@
 .rotateIcon{
     transition: .2s all ease-in;
     transform: rotate(180deg);
+}
+.active{
+    background-color: #6b9b6c28;
+    font-weight: bold;
+    border-radius: 10px;
+    /* padding: 1rem; */
+}
+.active span{
+    background-color: white;
 }

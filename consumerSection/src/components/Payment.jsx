@@ -42,7 +42,7 @@ const Payment = () => {
                   <td className="p-4">Rs.799</td>
                   <td className="p-4">14 Nov 2023</td>
                   <td className="p-4 flex space-x-2">
-                    <button className="text-blue-600 hover:underline bg-blue-100 px-3 py-2 rounded-sm flexClass">
+                    <button className="text-blue-600 hover:underline bg-blue-100 px-3 py-2 rounded-sm flexClass" >
                       Download
                       <span className="mx-2">
                         <img src="./Download.svg" alt="" className="icons" />
