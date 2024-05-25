@@ -1,7 +1,12 @@
-// src/components/Payment.js
 import React from 'react';
+import { useState } from 'react';
+import Popup from './Popup';
 
 const Payment = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  
+  const handleOpenPopup = () => setIsPopupOpen(true);
+  const handleClosePopup = () => setIsPopupOpen(false);
   return (
     <div className="flex-grow p-6 mt-[2rem]">
       <div className="bg-white rounded-lg mb-6 w-[30%]">
@@ -48,7 +53,7 @@ const Payment = () => {
                         <img src="./Download.svg" alt="" className="icons" />
                       </span>
                     </button>
-                    <button className="text-green-600 hover:underline flex items-center bg-blue-100 px-3 py-2 rounded-sm flexClass">
+                    <button className="text-green-600 hover:underline flex items-center bg-blue-100 px-3 py-2 rounded-sm flexClass" onClick={handleOpenPopup}>
                       view
                       <span className="material-icons-outlined ml-1">visibility</span>
                       <span className="mx-2">
@@ -60,6 +65,7 @@ const Payment = () => {
               ))}
             </tbody>
           </table>
+          <Popup isOpen={isPopupOpen} onClose={handleClosePopup} />
         </div>
       </div>
     </div>

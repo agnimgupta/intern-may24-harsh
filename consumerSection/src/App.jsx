@@ -10,6 +10,7 @@ import Payment from './components/Payment';
 import Chats from './components/Chats'
 import Container from './components/Container';
 import Routines from './components/Routines';
+import CreateRoutine from './components/CreateRoutine';
 function App() {
   return (
     <Router>
@@ -25,6 +26,7 @@ function App() {
                 {/* <Route path="/" element={<Home />} /> */}
                 <Route path="/find-doctor" element={<FindDoctor />} />
                 <Route path="/routines" element={<Routines />} />
+                <Route path="/create-routine" element={<CreateRoutine />} />
                 <Route path="/payment" element={<Payment />} />
                 <Route path="/chat" element={<Chats />} />
 

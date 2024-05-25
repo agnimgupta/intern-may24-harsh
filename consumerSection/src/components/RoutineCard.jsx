@@ -1,4 +1,3 @@
-// src/components/RoutineCard.js
 import React from 'react';
 
 const RoutineCard = ({ image, title, reminders, progress, finished }) => {
@@ -23,4 +22,4 @@ const RoutineCard = ({ image, title, reminders, progress, finished }) => {
     );
 };
 
-export default RoutineCard;
+export default RoutineCard; 
