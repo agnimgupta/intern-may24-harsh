@@ -3,7 +3,7 @@ import React from 'react'
 const ExploreNowCard = ({title, subTitle, exploreLink, image}) => {
   return (
     <>
-        <div className="relative  rounded-xl overflow-hidden  flex items-center justify-between  w-[400px] h-[auto] bg-gradient-to-l from-[#91a8fa68] to-[#F5F5F5] mx-3 flex-wrap mt-4">
+        <div className="relative  rounded-xl overflow-hidden  flex items-center justify-between h-[auto] bg-gradient-to-l from-[#91a8fa68] to-[#F5F5F5] flex-wrap mt-4 min-w-[350px] max-w-[400px]">
           <img src="./SpiralCoverImage.png" alt="Skin Care Routine" className="absolute w-full h-auto object-cover" />
           <div className="ml-4">
             <h2 className="text-xl font-semibold">{title}</h2>

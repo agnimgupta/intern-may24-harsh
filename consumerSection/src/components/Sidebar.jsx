@@ -1,111 +1,125 @@
-// src/components/Sidebar.js
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from "react";
+import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
+import { Link } from "react-router-dom";
+// import 'react-pro-sidebar/dist/css/styles.css';
 
-const Sidebar = () => {
+const CustomSidebar = () => {
+  const [collapsed, setCollapsed] = useState(false);
+
+  const handleToggleSidebar = () => {
+    setCollapsed(!collapsed);
+  };
+
   return (
-    <div className="w-96 bg-white border-2 border-gray-100 ml-[4rem] py-[3rem]">
-      <div className="flex flex-col items-center border-b-2 border-slate-300">
-        <img
-          src="./userProfile.png"
-          alt="Profile"
-          className="h-24 w-24 rounded-full mb-4"
-        />
-        <h2 className="text-xl font-semibold">Priya Singhal</h2>
-        <p className="text-sm text-gray-500">24th July, 1999, 25 years</p>
-        <p className="text-sm text-gray-500 mb-4">New Delhi, India</p>
+    <div className="hidden lg:flex lg:absolute lg:top-0 lg:left-0 ">
+      <Sidebar collapsed={collapsed}>
+        <div className="flex flex-col items-center border-b-2 border-slate-300 py-4  bg-white">
+          <img
+            src="/userProfile.png"
+            alt="Profile"
+            className={`${
+              collapsed ? "w-14 h-auto" : "h-24 w-24"
+            } rounded-full mb-4`}
+          />
+          {!collapsed && (
+            <>
+              <h2 className="text-xl font-semibold">Priya Singhal</h2>
+              <p className="text-sm text-gray-500">24th July, 1999, 25 years</p>
+              <p className="text-sm text-gray-500 mb-4">New Delhi, India</p>
+            </>
+          )}
+        </div>
+        <Menu className={`${collapsed ? "px-3" : "px-6"} w-full bg-white`}>
+          <MenuItem
+            component={<Link to="/" />}
+            icon={<img src="/MenuIcon.svg" alt="" className="icons " />}
+            className={`border-b border-gray-400 py-2 flex w-full  
+					${collapsed ? "justify-center items-center" : "justify-start items-start"} `}
+          >
+            {!collapsed && "Dashboard"}
+          </MenuItem>
+		  
+          <MenuItem
+            component={<Link to="/appointment" />}
+            icon={<img src="/Appointment.svg" alt="" className="icons" />}
+            className={`border-b border-gray-400 py-2 flex w-full  ${
+              collapsed
+                ? "justify-center items-center"
+                : "justify-start items-start"
+            } `}
+          >
+            {!collapsed && "Appointments"}
+          </MenuItem>
+          <MenuItem
+            component={<Link to="/routines" />}
+            icon={<img src="/Routine.svg" alt="" className="icons" />}
+            className={`border-b border-gray-400 py-2 flex w-full  ${
+              collapsed
+                ? "justify-center items-center"
+                : "justify-start items-start"
+            } `}
+          >
+            {!collapsed && "Routines"}
+          </MenuItem>
+          <MenuItem
+            component={<Link to="/medical-records" />}
+            icon={<img src="/MedicalRecord.svg" alt="" className="icons" />}
+            className={`border-b border-gray-400 py-2 flex w-full  ${
+              collapsed
+                ? "justify-center items-center"
+                : "justify-start items-start"
+            } `}
+          >
+            {!collapsed && "Medical Records"}
+          </MenuItem>
+          <MenuItem
+            component={<Link to="/payment" />}
+            icon={<img src="/Payment.svg" alt="" className="icons" />}
+            className={`border-b border-gray-400 py-2 flex w-full  ${
+              collapsed
+                ? "justify-center items-center"
+                : "justify-start items-start"
+            } `}
+          >
+            {!collapsed && "Payment"}
+          </MenuItem>
+          <MenuItem
+            component={<Link to="/chat" />}
+            icon={<img src="/Chat.svg" alt="" className="icons" />}
+            className={`border-b border-gray-400 py-2 flex w-full  ${
+              collapsed
+                ? "justify-center items-center"
+                : "justify-start items-start"
+            } `}
+          >
+            {!collapsed && "Your Chats"}
+          </MenuItem>
+          <MenuItem
+            component={<Link to="/logout" />}
+            icon={
+              <img src="/arrowLeft.svg" alt="" className="icons rotate-90" />
+            }
+            className={`border-b border-gray-400 py-2 flex w-full  ${
+              collapsed
+                ? "justify-center items-center"
+                : "justify-start items-start"
+            } `}
+          >
+            {!collapsed && "Logout"}
+          </MenuItem>
+        </Menu>
+      </Sidebar>
+      <div className="mt-[20px] ml-[20px] z-20 cursor-pointer">
+        <div className="btn w-[40px] h-[40px]" onClick={handleToggleSidebar}>
+          <img
+            src={collapsed ? "/rightArrowWhite.svg" : "/leftArrowWhite.svg"}
+            alt="toggle arrow"
+            className=" flex items-center p-2 text-white bg-[--primary] rounded"
+          />
+        </div>
       </div>
-      <nav className="mt-8 px-4 pl-10">
-        <ul>
-          <li className="my-1 border-b-2 border-gray-100 py-2">
-            <NavLink
-              exact
-              to="/"
-              activeClassName="active"
-              className="flex items-center text-gray-700 hover:text-green-600 p-3"
-            >
-              <span className="material-icons-outlined mr-2 bg-gray-100 p-2 rounded-lg">
-                <img src="./MenuIcon.svg" alt="" className="icons" />
-              </span>
-              Dashboard
-            </NavLink>
-          </li>
-          <li className="my-1 border-b-2 border-gray-100 py-2">
-            <NavLink
-              to="/appointments"
-              activeClassName="active"
-              className="flex items-center text-gray-700 hover:text-green-600 p-3"
-            >
-              <span className="material-icons-outlined mr-2 bg-gray-100 p-2 rounded-lg">
-                <img src="./Appointment.svg" alt="" className="icons" />
-              </span>
-              Appointments
-            </NavLink>
-          </li>
-          <li className="my-1 border-b-2 border-gray-100 py-2">
-            <NavLink
-              to="/routines"
-              activeClassName="active"
-              className="flex items-center text-gray-700 hover:text-green-600 p-3"
-            >
-              <span className="material-icons-outlined mr-2 bg-gray-100 p-2 rounded-lg">
-                <img src="./Routine.svg" alt="" className="icons" />
-              </span>
-              Routines
-            </NavLink>
-          </li>
-          <li className="my-1 border-b-2 border-gray-100 py-2">
-            <NavLink
-              to="/medical-records"
-              activeClassName="active"
-              className="flex items-center text-gray-700 hover:text-green-600 p-3"
-            >
-              <span className="material-icons-outlined mr-2 bg-gray-100 p-2 rounded-lg">
-                <img src="./MedicalRecord.svg" alt="" className="icons" />
-              </span>
-              Medical Records
-            </NavLink>
-          </li>
-          <li className="my-1 border-b-2 border-gray-100 py-2">
-            <NavLink
-              to="/payment"
-              activeClassName="active"
-              className="flex items-center text-gray-700 hover:text-green-600 p-3"
-            >
-              <span className="material-icons-outlined mr-2 bg-gray-100 p-2 rounded-lg">
-                <img src="./Payment.svg" alt="" className="icons" />
-              </span>
-              Payment
-            </NavLink>
-          </li>
-          <li className="my-1 border-b-2 border-gray-100 py-2">
-            <NavLink
-              to="/chat"
-              activeClassName="active"
-              className="flex items-center text-gray-700 hover:text-green-600 p-3"
-            >
-              <span className="material-icons-outlined mr-2 bg-gray-100 p-2 rounded-lg">
-                <img src="./Chat.svg" alt="" className="icons" />
-              </span>
-              Your Chats
-            </NavLink>
-          </li>
-          <li className="my-1 border-b-2 border-gray-100 py-2 ">
-            <NavLink
-              to="/logout"
-              activeClassName="active"
-              className="flex items-center text-gray-700 hover:text-green-600 p-3 "
-            >
-              <span className="material-icons-outlined mr-2 bg-gray-100 p-2 rounded-lg">
-                <img src="./arrowLeft.svg" alt="" className="icons rotate-90" />
-              </span>
-              Logout
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
     </div>
   );
 };
 
-export default Sidebar;
+export default CustomSidebar;

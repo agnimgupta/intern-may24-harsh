@@ -4,7 +4,7 @@ const Popup = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-75">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-75 ">
       <div className="bg-white w-full max-w-4xl p-6 rounded-lg shadow-lg">
         <div className="flex justify-between items-start mb-4">
           <h2 className="text-xl font-semibold">Payment Receipt</h2>
@@ -14,7 +14,7 @@ const Popup = ({ isOpen, onClose }) => {
             </svg>
           </button>
         </div>
-        <div className="overflow-y-auto max-h-96">
+        <div className="overflow-y-auto max-h-[30rem]">
           <div className="text-left">
             <div className="mb-4">
               <h2 className="font-semibold">Amrutam Pharmaceuticals Private Limited</h2>

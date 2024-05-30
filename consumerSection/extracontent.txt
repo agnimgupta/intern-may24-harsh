@@ -1,1 +1,113 @@
-${isDropdownOpen ? "rotate" : "null"}
+
+
+
+import React, { useState } from 'react';
+import RoutineInfoTwo from './RoutineInfoTwo';
+import { NavLink } from 'react-router-dom';
+const WeeklyBenefits = () => {
+    const [benefits, setBenefits] = useState([{ weeks: '0-2 Weeks Benefits', value: '' }, { weeks: '2-4 Weeks Benefits', value: '' }]);
+
+    const handleAddMore = (weeks) => {
+        setBenefits([...benefits, { weeks, value: '' }]);
+    };
+
+    const handleChange = (index, e) => {
+        const newBenefits = [...benefits];
+        newBenefits[index].value = e.target.value;
+        setBenefits(newBenefits);
+    };
+
+    return (
+        <div className="max-w-4xl mx-auto my-4 ">
+            <RoutineInfoTwo content="This weekly benefit will help potential users track their weekly progress while using this routine. "/>
+
+            <div className="wrapperDiv border rounded-lg overflow-hidden w-full">
+                <div className="">
+                    <h2 className="text-xl font-semibold mb-8 bg-[#3a643b19] p-6 text-[--primary]">Add Weekly Benefits</h2>
+                </div>
+
+                <div className="childWrapper p-6 w-[100%]">
+                    <div className="mb-6 w-[50%]">
+                        <label className="block text-gray-700 text-md font-bold mb-2" htmlFor="select-weeks">Enter Weekly Benefits</label>
+                        <input
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none "
+                            id="select-weeks"
+                            type="text"
+                            value="2 weeks"
+                            readOnly
+                        />
+                    </div>
+
+                    <div className="w-full flex justify-between items-center flex-wrap ">
+
+                        {benefits.map((benefit, index) => (
+                            <div key={index} className="mb-6 flex justify-center items-start flex-col w-[45%] mr-2">
+                                <label className="block text-gray-700 text-md font-bold mb-2" htmlFor={`benefit-${index}`}>{benefit.weeks}</label>
+                                <textarea
+                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none  mb-4"
+                                    id={`benefit-${index}`}
+                                    value={benefit.value}
+                                    onChange={(e) => handleChange(index, e)}
+                                    rows="4"
+                                />
+                                <div className="w-full flex justify-end items-end">
+                                    <button
+                                        className=" text-[--primary] font-bold py-2 px-4 rounded focus:outline-none items-end"
+                                        type="button"
+                                        onClick={() => handleAddMore('0-2 Weeks Benefits')}
+                                    >
+                                        <span className='flexClass'><img src="./Plus.svg" alt="" className='icons mx-2 border-2 border-[--primary] rounded-lg ' />Add More</span> 
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    
+
+                    <div className="mt-6 w-full flexClass">
+                        <NavLink to="/add-your-product"
+                            className="bg-[--primary]  text-white font-bold py-4 px-4 rounded focus:outline-none  w-[50%] flexClass"
+                            type="button"
+                        >
+                            Add Product
+                        </NavLink>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default WeeklyBenefits;
+
+
+// <Router>
+    //   <div>
+    //     <Navbar />
+    //     <div className="relative">
+    //       <Banner name="Priya" />
+
+    //       <div className="wrapper w-[100%] flex justify-start items-start">
+    //         <Sidebar />
+    //         <Container >
+    //           <Routes>
+    //             {/* <Route path="/" element={<Home />} /> */}
+    //             <Route path="/find-doctor" element={<FindDoctor />} />
+    //             <Route path="/routines" element={<Routines />} />
+    //             <Route path="/routines/create-routine" element={<CreateRoutine />} />
+    //             <Route path="/add-reminder" element={<Reminder />} />
+    //             <Route path="/weekly-benefits" element={<WeeklyBenefits />} />
+    //             <Route path="/add-your-product" element={<AddYourProduct />} />
+    //             <Route path="/assign-caregiver" element={<AssignCaregiver />} />
+    //             <Route path="/payment" element={<Payment />} />
+    //             <Route path="/profile" element={<Profile />} />
+    //             <Route path="/chat" element={<Chats />} />
+
+    //           </Routes>
+    //         </Container>
+
+    //       </div>
+    //     </div>
+    //   </div>
+    // </Router>

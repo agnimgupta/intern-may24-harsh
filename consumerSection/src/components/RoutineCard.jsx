@@ -2,7 +2,7 @@ import React from 'react';
 
 const RoutineCard = ({ image, title, reminders, progress, finished }) => {
     return (
-        <div className="border rounded-xl p-4 mb-4 w-[250px] mr-3">
+        <div className="border rounded-xl p-4 mb-4 w-[auto] mr-3">
             <img src={image} alt={title} className="w-full h-40 object-cover rounded-lg mb-2" />
 
             <div className="name flex justify-between items-center w-full ">

@@ -14,7 +14,7 @@ const CreateRoutinePopup = ({ isOpen, onClose }) => {
 					</button>
 				</div>
 				<div className="flex justify-center items-center flex-col mt-8 ">
-					<NavLink to="/create-routine" className="bg-[--primary] text-white px-4 py-2 rounded-md mb-8 hover:bg-green-700">
+					<NavLink to="/routines/create-routine" className="bg-[--primary] text-white px-4 py-2 rounded-md mb-8 hover:bg-green-700">
 						Create New Routine
 					</NavLink>
 					<div>
