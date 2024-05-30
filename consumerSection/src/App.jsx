@@ -1,42 +1,99 @@
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import Home from './components/Home';
-// import About from './components/About';
-import FindDoctor from './components/FindDoctor';
-import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import Sidebar from './components/Sidebar';
+
 import Payment from './components/Payment';
 import Chats from './components/Chats'
-import Container from './components/Container';
 import Routines from './components/Routines';
 import CreateRoutine from './components/CreateRoutine';
+import Reminder from './components/Reminder';
+import WeeklyBenefits from './components/WeeklyBenefits';
+import AddYourProduct from './components/AddYourProduct';
+import AssignCaregiver from './AssignCareGiver';
+import Profile from './components/Profile';
+import ReminderChannel from "./components/ReminderChannel";
+import AppLayout from "./components/AppLayout";
+import Error from "./components/Error";
+import Appointments from "./components/Appointment";
+import AppointmentDetails from "./components/AppointmentDetails";
 function App() {
+  const router = createBrowserRouter([
+    {
+      element: <AppLayout />,
+      errorElement: <Error />,
+      children: [
+        {
+          path: "/",
+          element: <Navigate replace to="/payment" />,
+        },
+        {
+          path: "/payment",
+          element: <Payment />,
+        },
+        {
+          path: "/chat",
+          element: <Chats />,
+        },
+        {
+          path: "/routines",
+          element: <Routines />,
+        },
+        {
+          path: "/routine/add-reminder",
+          element: <Reminder />,
+        },
+        {
+          path: "/routines/create-routine",
+          element: <CreateRoutine />,
+        },
+        {
+          path: "/routine/create/weekly-benefits",
+          element: <WeeklyBenefits />,
+        },
+        {
+          path: "/routine/create/add-reminder/add-products",
+          element: <AddYourProduct />,
+        },
+        {
+          path: "/routine/create/add-reminder",
+          element: <Reminder />,
+        },
+        {
+          path: "/routine/create/assign-caregiver",
+          element: <AssignCaregiver />,
+        },
+        {
+          path: "/routine/create/add-reminder-channels",
+          element: <ReminderChannel />,
+        },
+        {
+          path: "/profile",
+          element: <Profile />,
+        },
+        {
+          path: "/appointment",
+          element: <Appointments />,
+        },
+        {
+          path: "/appointment/appointment-details",
+          element: <AppointmentDetails />,
+        },
+        // {
+        //   path: "/routine/:id",
+        //   element: <RoutineDetails />,
+        // },
+      ],
+    },
+  ]);
   return (
-    <Router>
-      <div>
-        <Navbar />
-        <div className="relative">
-          <Banner name="Priya" />
+    
 
-          <div className="wrapper w-[100%] flex justify-start items-start">
-            <Sidebar />
-            <Container >
-              <Routes>
-                {/* <Route path="/" element={<Home />} /> */}
-                <Route path="/find-doctor" element={<FindDoctor />} />
-                <Route path="/routines" element={<Routines />} />
-                <Route path="/create-routine" element={<CreateRoutine />} />
-                <Route path="/payment" element={<Payment />} />
-                <Route path="/chat" element={<Chats />} />
+    <RouterProvider router={router} />
 
-              </Routes>
-            </Container>
 
-          </div>
-        </div>
-      </div>
-    </Router>
   );
 }
 

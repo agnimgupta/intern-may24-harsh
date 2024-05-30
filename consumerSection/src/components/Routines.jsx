@@ -42,25 +42,25 @@ const Routines = () => {
 	];
 
 	return (
-		<div className="p-6">
+		<div className=" w-[100%] m:w-[80%] xl:w-[90%] p-4">
 
-			<div className="flex justify-between items-center mb-6 bg-[#FFF7E2] px-8 py-8 rounded-lg  ">
+			<div className="flex justify-between items-center flex-col mb-6 bg-[#FFF7E2] px-4 py-4 rounded-lg lg:p-8 md:flex-row ">
 				<div className="flex flex-col">
 
 					<h1 className="text-2xl font-semibold text-[--primary] mb-4">What's a routine?</h1>
-					<p className=" text-gray-700 rounded-lg mb-6 w-[80%]">
+					<p className=" text-gray-700 rounded-lg mb-6 w-[90%] md:w-[90%] ">
 						Routines are personalized health plans provided by your doctor, or created by you including medicines, diet, exercise, and self-care habits tailored to your needs.
 					</p>
 
 				</div>
-				<button className="bg-[--primary] text-white py-2 px-4 rounded-lg w-[30%]" onClick={() => setIsPopupOpen(true)}>Create a routine +</button>
+				<button className="bg-[--primary] text-white py-2 px-4 rounded-lg w-[70%] md:w-[50%]" onClick={() => setIsPopupOpen(true)}>Create a routine +</button>
 			</div>
 			<CreateRoutinePopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)}/>
 
 			<div className="wrapper border-2 border-[#3a643b40] bg-white rounded-2xl overflow-hidden">
 				<div className="heading text-2xl font-semibold  p-6 bg-[#F7FCFA] text-[--primary]">Routines</div>
 
-				<div className="p-8 border-y-2 border-slate-200 ">
+				<div className="p-4 border-y-2 border-slate-200 lg:p-8 ">
 					<h2 className="text-xl font-semibold text-black ">Today's Routines</h2>
 					<p className="text-gray-500 mb-4">You have 4 Routines remaining for the day</p>
 					{todayRoutines.map((routine, index) => (
@@ -84,15 +84,14 @@ const Routines = () => {
 					<p className="text-green-700 cursor-pointer">More Routines (2)</p>
 				</div>
 
-				<div className='p-8 '>
+				<div className='p-4 lg:p-8'>
 					<h2 className="text-xl font-semibold text-black mb-4">My Routine</h2>
-					<div className="flex justify-start">
+					<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:justify-start">
 						{myRoutines.map((routine, index) => (
 							<RoutineCard key={index} {...routine} />
 						))}
 					</div>
 				</div>
-
 				<RoutineExplore />
 			</div>
 		</div>

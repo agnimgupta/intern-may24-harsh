@@ -24,14 +24,14 @@ const ChatList = ({ contacts, onSelect }) => {
               alt={contact.name}
               className="h-12 w-12 rounded-full mr-4"
             />
-            <div className="flex-1">
+            <div className="hidden lg:block flex-1">
               <div className="flex justify-between">
                 <h4 className="font-semibold">{contact.name}</h4>
                 <span className="text-sm text-gray-500">{contact.time}</span>
               </div>
               <p className="text-sm text-gray-500 truncate">{contact.message}</p>
+            <span className=" bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">{contact.newMessages}</span>
             </div>
-            <span className="ml-2 bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">{contact.newMessages}</span>
           </li>
         ))}
       </ul>
