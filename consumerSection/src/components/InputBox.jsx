@@ -15,7 +15,7 @@ const InputBox = ({ label, placeholder, helpText, mdWidth }) => {
             type="text"
             name="name"
             id="name"
-            className="block w-full border-0 p-0 py-1.5 font-poppins text-[16px] leading-[24px] text-black placeholder-neutral-400 placeholder:text-sm focus:ring-0 outline-none"
+            className="block w-full border-0 p-0 py-1.5 font-poppins text-[16px] leading-[24px] text-black placeholder-neutral-400 outline-none  placeholder:text-sm focus:ring-0"
             placeholder={placeholder}
           />
         </div>

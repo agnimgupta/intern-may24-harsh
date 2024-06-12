@@ -22,7 +22,7 @@ const PhotoUploader = () => {
     };
 
     return (
-        <div className="relative h-[210px] w-[210px] shrink-0  rounded-2xl bg-[url('/Uploader.svg')] bg-center  bg-no-repeat my-4">
+        <div className="relative h-[210px] w-[210px]  rounded-2xl bg-[url('/Uploader.svg')] bg-center  bg-no-repeat my-4">
             {previewUrl && (
                 <span
                     onClick={() => {

@@ -1,5 +1,8 @@
 import AddReminderChannels from "./AddReminderChannel";
 import Breadcrumb from "./BreadCrump";
+import Layout from "./Layout";
+import HeadingDiv from "./HeadingDiv";
+import RoutineInfo from "./RoutineInfo";
 const REMINDER_CHANNELS = [
   { title: "SMS", channel: "Mobile Number", isActive: true },
   { title: "WhatsApp", channel: "WhatsApp Number", isActive: true },
@@ -19,32 +22,33 @@ const REMINDER_CHANNELS = [
     btnLabel: "Add Account",
   },
 ];
+const breadcrumbItems = [
+  { label: "Routine", path: "/routines" },
+  { label: "Add Reminder Channel", path: "/routine/create/add-reminder-channels" },
+];
+
 
 const ReminderChannel = () => {
   return (
-    <section
-      className={`mx-auto mb-5 flex justify-center items-center flex-col  min-h-full max-w-7xl   gap-[1.9rem] rounded-xl  px-5  py-4`}
-    >
-      <Breadcrumb
-        list={["Routine", "Add New Routine", "Add Reminder Channels"]}
+    <Layout>
+
+
+      <Breadcrumb data={breadcrumbItems}
       />
-      <div className="flex w-full flex-col gap-10 rounded-xl bg-white  py-4 lg:pr-16 border">
 
-        <div className="font-poppins text-[22px] text-black border-b px-5">
-          Add Reminder Channels
-        </div>
-
+      <RoutineInfo heading="what are Reminder Channels? " content="Reminder channels are communication methods through which reminders can be sent, such as SMS, email, Facebook Messenger, Instagram, and more." />
+      <HeadingDiv title="Add Reminder Channel">
         <div className="flex flex-col gap-7 p-5">
-          
+
           <div className="font-poppins text-[18px] text-black">
             Active Channels
           </div>
 
-          <div className="flex flex-wrap gap-9">
+          <div className="flex flex-wrap gap-9 w-full ">
             {REMINDER_CHANNELS.map((item) => (
               <div key={item.title} className="w-full sm:w-fit">
                 {item.isActive && (
-                  <div key={item.title} className="w-full sm:w-fit xl:mr-5">
+                  <div key={item.title} className="w-full sm:w-fit ">
                     <AddReminderChannels
                       title={item.title}
                       channel={item.channel}
@@ -67,7 +71,7 @@ const ReminderChannel = () => {
                   className={`w-full sm:w-fit ${!item.isActive ? "" : "hidden"}`}
                 >
                   {!item.isActive && (
-                    <div key={item.title} className="w-full sm:w-fit xl:mr-5">
+                    <div key={item.title} className="w-full sm:w-fit">
                       <AddReminderChannels
                         title={item.title}
                         channel={item.channel}
@@ -81,8 +85,10 @@ const ReminderChannel = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+
+      </HeadingDiv>
+
+    </Layout>
   );
 };
 

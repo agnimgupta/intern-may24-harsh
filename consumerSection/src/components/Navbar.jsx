@@ -15,9 +15,9 @@ function Navbar() {
 	return (
 		<nav className="bg-[#FFF7E2] p-4 px-4 md:px-8 flex items-center justify-between h-20 md:h-24">
 
-			<div className="flex items-center">
+			<Link to="/"><div className="flex items-center">
 				<img src="/Logo.png" alt="Logo" className="h-8 md:h-12" />
-			</div>
+			</div></Link>
 
 			<div className="hidden lg:flex justify-center space-x-4 w-auto">
 				<Link to="/" className="text-black links mx-2 md:mx-4">Home</Link>
@@ -46,10 +46,11 @@ function Navbar() {
 							<img
 								src="/downArrow.svg"
 								alt="User Profile"
-								className={`icons transition-all ${isProfileDropdownOpen ? "rotate-180" : ""}`}
+								className={` transition-all ${isProfileDropdownOpen ? "rotate-180" : ""} w-[14px] md:w-[20px]`}
 							/>
 						</div>
 					</button>
+
 					{isProfileDropdownOpen && (
 						<div className="absolute right-0 top-12 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
 							<Link to="/profile" className="block px-4 py-4 text-gray-700 hover:bg-gray-100 links">Profile</Link>
@@ -67,7 +68,6 @@ function Navbar() {
 
 			<div className="lg:hidden">
 				<button onClick={toggleDropdown} className="text-black focus:outline-none">
-					{/* Add a menu icon for mobile view */}
 					<svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
 					</svg>
@@ -87,7 +87,7 @@ function Navbar() {
 						<Link to="/medical-records" className="block px-4 py-4 text-gray-700 hover:bg-gray-100 links">Medical Record</Link>
 
 						<Link to="/appointment" className="block px-4 py-4 text-gray-700 hover:bg-gray-100 links">Appointment</Link>
-						
+
 						<button
 							onClick={() => { /* handle logout */ }}
 							className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 links"

@@ -1,5 +1,64 @@
 import React, { useState } from 'react';
-import Popup from './Popup';
+import Popup from '../components/Popup';
+import TabularData from '../components/TabularData';
+const data = [
+  {
+    "Invoice No.": "INV-0010",
+    "Doctor": {
+      "Name": "Dr. Darren Elder",
+      "Specialty": "Dental",
+      "Image": "Doctor.png"
+    },
+    "Amount": "Rs.799",
+    "Paid On": "14 Nov 2023",
+    "Action": {
+      "Download": "Download URL",
+      "View": "View URL"
+    }
+  },
+  {
+    "Invoice No.": "INV-0010",
+    "Doctor": {
+      "Name": "Dr. Darren Elder",
+      "Specialty": "Dental",
+      "Image": "Doctor.png"
+    },
+    "Amount": "Rs.799",
+    "Paid On": "14 Nov 2023",
+    "Action": {
+      "Download": "Download URL",
+      "View": "View URL"
+    }
+  },
+  {
+    "Invoice No.": "INV-0010",
+    "Doctor": {
+      "Name": "Dr. Darren Elder",
+      "Specialty": "Dental",
+      "Image": "Doctor.png"
+    },
+    "Amount": "Rs.799",
+    "Paid On": "14 Nov 2023",
+    "Action": {
+      "Download": "Download URL",
+      "View": "View URL"
+    }
+  },
+  {
+    "Invoice No.": "INV-0010",
+    "Doctor": {
+      "Name": "Dr. Darren Elder",
+      "Specialty": "Dental",
+      "Image": "Doctor.png"
+    },
+    "Amount": "Rs.799",
+    "Paid On": "14 Nov 2023",
+    "Action": {
+      "Download": "Download URL",
+      "View": "View URL"
+    }
+  }
+]
 
 const Payment = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -20,7 +79,7 @@ const Payment = () => {
         <h2 className="text-2xl font-semibold mb-4 p-6 bg-[#F7FCFA] text-[--primary]">
           Payments
         </h2>
-        <div className="overflow-x-auto p-6">
+        {/* <div className="overflow-x-auto p-6">
           <table className="w-full min-w-max table-auto">
             <thead>
               <tr className="text-left border-b-2 border-slate-100">
@@ -32,22 +91,22 @@ const Payment = () => {
               </tr>
             </thead>
             <tbody>
-              {[...Array(4)].map((_, index) => (
+              {data.map((item, index) => (
                 <tr key={index} className="border-b border-slate-200">
-                  <td className="p-4"># INV-0010</td>
+                  <td className="p-4">{item['Invoice No.']}</td>
                   <td className="p-4 flex items-center">
                     <img
-                      src="./Doctor.png"
-                      alt="Doctor"
+                      src={item.Doctor.Image}
+                      alt={item.Doctor.Name}
                       className="h-10 w-10 rounded-full mr-4"
                     />
                     <div>
-                      <p>Dr. Darren Elder</p>
-                      <p className="text-sm text-gray-500">Dental</p>
+                      <p>{item.Doctor.Name}</p>
+                      <p className="text-sm text-gray-500">{item.Doctor.Specialty}</p>
                     </div>
                   </td>
-                  <td className="p-4">Rs.799</td>
-                  <td className="p-4">14 Nov 2023</td>
+                  <td className="p-4">{item.Amount}</td>
+                  <td className="p-4">{item['Paid On']}</td>
                   <td className="p-4 flex flex-wrap space-x-2">
                     <button className="text-blue-600 hover:underline bg-blue-100 px-3 py-2 rounded-sm flex items-center">
                       Download
@@ -71,8 +130,10 @@ const Payment = () => {
             </tbody>
           </table>
           <Popup isOpen={isPopupOpen} onClose={handleClosePopup} />
-        </div>
+        </div> */}
+        <TabularData data={data}/>
       </div>
+
     </div>
   );
 };

@@ -1,22 +1,23 @@
 import React from 'react';
-
+import Layout from './Layout';
+import HeadingDiv from './HeadingDiv';
 const Profile = () => {
 	return (
-		<div className="flex justify-center items-center flex-col h-[60vh] p-4 w-full">
-			<div className="bg-white rounded-lg border w-full max-w-4xl flex flex-col  items-center ">
-				<h2 className="text-xl font-semibold mb-8 bg-[#3a643b19] p-6 text-[--primary] w-full text-center ">Patient Profile</h2>
-				
-				<div className="flex flex-col md:flex-row items-center md:items-start w-full md:w-auto">
+		<Layout>
+
+			<HeadingDiv title="Personal & Contact Details">
+
+				<div className="flex flex-col md:flex-row justify-center  items-center md:items-center w-full md:w-auto ">
 					<div className="flex justify-center mb-4 md:mb-0 md:mr-6">
 						<img
 							className="w-24 h-24 rounded-full object-cover"
-							src="./userProfile.png" // Replace with the actual image source
+							src="./userProfile.png" 
 							alt="Priya Singhal"
 						/>
 					</div>
 
 					<div className="content flex flex-col md:flex-row md:items-start w-full md:w-auto p-4">
-						<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 mb-4 md:mb-0 text-center">
+						<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 mb-4 md:mb-0 ">
 							<div className="mb-4 md:mb-0">
 								<p className="font-semibold">Name</p>
 								<h2 className=" font-bold text-gray-900">Priya Singhal</h2>
@@ -43,15 +44,16 @@ const Profile = () => {
 							</div>
 						</div>
 					</div>
-					
-					<div className="flex justify-center mt-4 md:mt-0">
+
+					<div className="flex justify-center mt-4 md:mt-0 mb-4">
 						<button className="bg-[--primary] text-white px-4 py-2 rounded-lg focus:outline-none">
 							Edit Profile
 						</button>
 					</div>
 				</div>
-			</div>
-		</div>
+
+			</HeadingDiv>
+		</Layout>
 	);
 };
 

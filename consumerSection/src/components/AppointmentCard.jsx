@@ -16,7 +16,7 @@ const AppointmentCard = ({ doctor, status }) => (
             </div>
             <div className="flex justify-center items-center flex-col mt-4">
                 <button className={` ${status === 'Cancelled' ? "bg-red-200 text-red-500" : "border border-[--primary] text-[--primary]"}  font-bold py-2 px-4 rounded m-1 w-full`}>{status === 'Cancelled' ? "Cancelled" : "View Routine"}</button>
-                <button className="bg-[--primary] text-white font-bold py-2 px-4 rounded m-1 w-full ">Book Appointment</button>
+                <button className="bg-[--primary] text-white font-bold py-2 px-4 rounded m-1 w-full "><NavLink to="/appointment/appointment-booking"  >Book Appintment </NavLink></button>
             </div>
             <button className="mt-2 text-[--primary] w-full">
 
