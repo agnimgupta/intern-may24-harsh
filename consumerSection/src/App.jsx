@@ -18,7 +18,7 @@ import Profile from './components/Profile';
 import ReminderChannel from "./components/ReminderChannel";
 import AppLayout from "./components/AppLayout";
 import Error from "./components/Error";
-import Appointments from "./components/Appointment";
+import Appointments from "./Pages/Appointment";
 import AppointmentDetails from "./components/AppointmentDetails";
 import MedicalRecord from "./Pages/MedicalRecord";
 import Login from "./components/Login";

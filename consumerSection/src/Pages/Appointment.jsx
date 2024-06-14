@@ -1,6 +1,6 @@
-import AppointmentCard from './AppointmentCard';
+import AppointmentCard from '../components/AppointmentCard';
 import { useState } from 'react';
-import BookAppointmentBanner from './BookAppointmentBanner';
+import BookAppointmentBanner from '../components/BookAppointmentBanner';
 const Appointments = () => {
     const [tab, setTab] = useState('Upcoming Appointments');
 
