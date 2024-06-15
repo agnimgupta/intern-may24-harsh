@@ -18,7 +18,7 @@ const AppLayout = () => {
                 <Banner name="Priya" />
                 <div className=" relative  w-full  flex justify-center lg:justify-start   items-start ">
                     <Sidebar openCloseHandler={handleToggleSidebar} collapsed={collapsed}/>
-                    <Container collapsed={collapsed}>
+                    <Container collapsed={collapsed} >
                         <Outlet />
                     </Container >
 

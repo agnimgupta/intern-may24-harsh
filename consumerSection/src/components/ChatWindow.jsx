@@ -3,6 +3,7 @@ import React from 'react';
 const ChatWindow = ({ selectedContact, messages, onSendMessage }) => {
   return (
     <div className="w-2/3 p-4 flex flex-col">
+      
       <div className="flex items-center border-b-2 border-gray-100 pb-4 mb-4">
         <img
           src={selectedContact.image}
@@ -14,13 +15,14 @@ const ChatWindow = ({ selectedContact, messages, onSendMessage }) => {
           <p className="text-sm text-gray-500">Last seen {selectedContact.lastSeen} ago</p>
         </div>
       </div>
+
       <div className="flex-1 overflow-y-auto">
         {messages.map((message, index) => (
-          <div key={index} className={`flex mb-4 ${message.sender === 'me' ? 'justify-end' : ''}`}>
+          <div key={index} className={`flex mb-4 ${message.sender === 'me' ? 'justify-end items-end' : ''} flex-col`}>
             <div className={`p-4 rounded-lg ${message.sender === 'me' ? 'bg-green-100 text-right' : 'bg-gray-100'}`}>
               <p>{message.text}</p>
-              <span className="text-xs text-gray-500">{message.time}</span>
             </div>
+              <span className="text-xs text-gray-500">{message.time}</span>
           </div>
         ))}
       </div>

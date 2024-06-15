@@ -15,11 +15,11 @@ const ActivityAndProductBased = ({ type, onNext, activityDetails, setActivityDet
 		<Layout>
 			<HeadingDiv title={type === 'Product based' ? 'Product Based Reminders' : 'Activity Based Reminders'}>
 
-				<div className="wrapperDiv p-6 ">
+				<div className="wrapperDiv p-6 "> 	
 
 					<h3 className="text-lg mb-4 font-bold">{type === 'Product based' ? 'Enter Product Details' : 'Enter Activity Details'}</h3>
 
-					<div className="flex w-[100%] justify-start items-start flex-col md:flex-row">
+					<div className="flex w-[100%] justify-start items-start flex-col xl:flex-row">
 
 						<div className="flex justify-start items-start w-[100%]  m:w-[50%]  flex-col ">
 

@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import ChatList from './ChatList';
 import ChatWindow from './ChatWindow';
-
+import Layout from '../components/Layout'
+import HeadingDiv from '../components/HeadingDiv'
 const contacts = [
   {
     name: 'Dr. William Stephin',
@@ -65,15 +66,16 @@ const Chat = () => {
   const [selectedContact, setSelectedContact] = useState(contacts[0]);
   // console.log(selectedContact);
   return (
-    <div className="flex m-[2rem] border-2 border-slate-200  flex-col rounded-xl overflow-hidden">
+    // <Layout>
+      <HeadingDiv title="My Chats">
 
-      <h2 className="text-3xl font-semibold  p-4 bg-[#F7FCFA] text-[--primary] w-full ">Chats</h2>
 
-      <div className="chatContainer flex border-y-2 border-slate-200">
-        <ChatList contacts={contacts} onSelect={setSelectedContact} />
-        <ChatWindow selectedContact={selectedContact} messages={messages} />
-      </div>
-    </div>
+        <div className="chatContainer flex border-y-2 border-slate-200">
+          <ChatList contacts={contacts} onSelect={setSelectedContact} />
+          <ChatWindow selectedContact={selectedContact} messages={messages} />
+        </div>
+      </HeadingDiv>
+    // </Layout>
   );
 };
 
