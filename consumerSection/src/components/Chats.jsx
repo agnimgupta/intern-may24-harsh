@@ -64,9 +64,10 @@ const messages = [
 
 const Chat = () => {
   const [selectedContact, setSelectedContact] = useState(contacts[0]);
+  console.log(selectedContact);
   // console.log(selectedContact);
   return (
-    // <Layout>
+    <div className='w-full md:w-[90%]  lg:w-[70%]'>
       <HeadingDiv title="My Chats">
 
 
@@ -75,7 +76,7 @@ const Chat = () => {
           <ChatWindow selectedContact={selectedContact} messages={messages} />
         </div>
       </HeadingDiv>
-    // </Layout>
+    </div>
   );
 };
 

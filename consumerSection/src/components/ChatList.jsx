@@ -3,7 +3,7 @@ import React from 'react';
 const ChatList = ({ contacts, onSelect }) => {
 
   return (
-    <div className="w-[50%] border-r-2 border-gray-100 p-4 justify-end items-center ">
+    <div className="w-[100%] md:w-[50%] border-r-2 border-gray-100 p-4 justify-end items-center ">
 
       <div className="flex justify-center mb-4 my-4 bg-gray-200 px-4 border rounded-lg  w-full m:w-[100%] xl:w-[100%] ">
         <img src="/Search.svg" alt="" className='w-[30px] h-[auto] object-contain' />

@@ -15,7 +15,7 @@ const ReminderItems = ({ onSelectType }) => {
                 <div className="flex justify-between items-center p-6 flex-col lg:flex-row">
 
                     <div
-                        className={`w-[100%] min-w-[300px] max-w-[450px]  relative overflow-hidden flex  items-center justify-start flex-col  border rounded-lg p-4  cursor-pointer bg-gradient-to-br from-[#F5F5F5] to-[#3a643b6b] min-h-[250px] lg:min-h-[150px] lg:flex-row`}
+                        className={`w-[100%] min-w-[250px] max-w-[450px]  relative overflow-hidden flex  items-center justify-start flex-col  border rounded-lg p-4  cursor-pointer bg-gradient-to-br from-[#F5F5F5] to-[#3a643b6b] min-h-[250px] lg:min-h-[150px] lg:flex-row`}
                         onClick={() => onSelectType('Product based')}
                     >
                         <input
@@ -23,7 +23,7 @@ const ReminderItems = ({ onSelectType }) => {
                             name="reminderType"
                             readOnly
                         />
-                        <div className="flex flex-col items-center justify-center lg:items-start  mt-2 w-[100%] ml-8 h-[100px] lg:w-[70%] ">
+                        <div className="flex flex-col items-center justify-center lg:items-start  mt-2 w-[100%] ml-8 h-[100px] lg:w-[90%] ">
                             <span className="text-lg">Product based</span>
                             <p className="text-sm text-gray-500">Skincare products, medication and other essentials.</p>
                         </div>
@@ -46,7 +46,7 @@ const ReminderItems = ({ onSelectType }) => {
 
 
                     <div
-                        className={`w-[100%] min-w-[300px] max-w-[450px]  relative overflow-hidden flex  items-center justify-start flex-col  border rounded-lg p-4  mr-4 cursor-pointer bg-gradient-to-br from-[#F5F5F5] to-[#3a643b6b] min-h-[250px] lg:min-h-[150px] lg:flex-row`}
+                        className={`w-[100%] min-w-[250px] max-w-[450px]  relative overflow-hidden flex  items-center justify-start flex-col  border rounded-lg p-4  mr-4 cursor-pointer bg-gradient-to-br from-[#F5F5F5] to-[#3a643b6b] min-h-[250px] lg:min-h-[150px] lg:flex-row`}
                         onClick={() => onSelectType('Activity based')}
                     >
                         <input

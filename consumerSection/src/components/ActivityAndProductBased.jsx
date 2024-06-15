@@ -21,7 +21,7 @@ const ActivityAndProductBased = ({ type, onNext, activityDetails, setActivityDet
 
 					<div className="flex w-[100%] justify-start items-start flex-col xl:flex-row">
 
-						<div className="flex justify-start items-start w-[100%]  m:w-[50%]  flex-col ">
+						<div className="flex justify-start items-start w-[100%]  md:w-[50%]  flex-col ">
 
 							<div className='w-[90%] mb-5 '>
 								<label className="block text-sm mb-2"> {type === 'Product based' ? 'Product Name' : 'Activity Name'}</label>
