@@ -63,17 +63,32 @@ const messages = [
 ];
 
 const Chat = () => {
-  const [selectedContact, setSelectedContact] = useState(contacts[0]);
-  console.log(selectedContact);
-  // console.log(selectedContact);
+  const [selectedContact, setSelectedContact] = useState(null);
+
+  const handleContactSelect = (contact) => {
+    setSelectedContact(contact);
+  };
+
+  const handleBackClick = () => {
+    setSelectedContact(null);
+  };
+
   return (
-    <div className='w-full md:w-[90%]  lg:w-[70%]'>
+    <div className='w-full 2xl:w-[70%] '>
       <HeadingDiv title="My Chats">
-
-
         <div className="chatContainer flex border-y-2 border-slate-200">
-          <ChatList contacts={contacts} onSelect={setSelectedContact} />
-          <ChatWindow selectedContact={selectedContact} messages={messages} />
+          <ChatList
+            contacts={contacts}
+            onSelect={handleContactSelect}
+            isHidden={selectedContact !== null}
+          />
+          {selectedContact && (
+            <ChatWindow
+              selectedContact={selectedContact}
+              messages={messages}
+              onBack={handleBackClick}
+            />
+          )}
         </div>
       </HeadingDiv>
     </div>

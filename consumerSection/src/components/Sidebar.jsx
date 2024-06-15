@@ -6,7 +6,7 @@ const CustomSidebar = ({ openCloseHandler, collapsed }) => {
 
 
   return (
-    <div className="hidden lg:flex lg:sticky  lg:top-0 lg:left-0 ">
+    <div className="hidden lg:flex lg:sticky  lg:top-0 lg:left-0 z-[100]">
       <Sidebar collapsed={collapsed} width="300px" rootStyles={{border:"2px solid #ECECEC"}}>
 
         <div className="flex flex-col items-center border-b-2 border-[#ECECEC] py-4  bg-white ">
