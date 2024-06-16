@@ -19,7 +19,7 @@ import ReminderChannel from "./components/ReminderChannel";
 import AppLayout from "./components/AppLayout";
 import Error from "./components/Error";
 import Appointments from "./Pages/Appointment";
-import AppointmentDetails from "./components/AppointmentDetails";
+import AppointmentDetails from "./Pages/AppointmentDetails";
 import MedicalRecord from "./Pages/MedicalRecord";
 import Login from "./components/Login";
 import Doctor from "./Pages/Doctor";

@@ -45,7 +45,7 @@ const CreateRoutinePopup = ({ isOpen, onClose }) => {
 
 					</div>
 					
-					<a href="#" className="text-[--primary] hover:underline mt-6 font-bold">
+					<a href="#" className="text-[--primary] hover:underline mt-6 font-bold underline">
 						View Sample Templates
 					</a>
 				</div>

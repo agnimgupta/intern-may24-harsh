@@ -4,7 +4,7 @@ const AddMoreButton = ({ label = "Add More", onClick }) => {
         onClick={onClick}
         className="flex cursor-pointer items-center gap-[10px]"
       >
-        <img className="h-[26px]" src="/Plus.svg" />
+        <img className="h-[26px] border border-[--primary] rounded-lg p-1" src="/Plus.svg"  />
         <div className="font-dm-sans text-[14px] font-medium tracking-[-0.02em] text-[--primary]">
           {label}
         </div>

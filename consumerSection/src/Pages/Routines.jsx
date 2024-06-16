@@ -2,9 +2,10 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import RoutineCard from '../components/RoutineCard';
-import RoutineExplore from '../components/RoutineExplore';
 import HeadingDiv from '../components/HeadingDiv';
 import CreateRoutinePopup from '../components/CreateRoutinePopup';
+import ExploreNowCard from '../components/ExploreNowCard'
+import SkinCareCard from '../components/SkinCareCard'
 import { useState } from 'react';
 const Routines = () => {
 
@@ -42,6 +43,41 @@ const Routines = () => {
 			finished: false
 		}
 	];
+	const skinCare = [
+		{
+			image: './SkinCard_1.png',
+			title: 'Skin Care Routine',
+			whatdo: '(Acne Reduction)',
+			duration: '12 Weeks',
+			weeks: '12',
+			reminders: '3',
+		},
+		{
+			image: './SkinCard_2.png',
+			title: 'Skin Care Routine ',
+			whatdo: '(Skin Glow)',
+			duration: '6 Weeks',
+			weeks: '6',
+			reminders: '3',
+		},
+	];
+	const exploreNow = [
+		{
+			image: './LadyExploreCard.png',
+			title: 'Skin Care Routine',
+			subTitle: 'Glass Skin',
+			exploreLink: "",
+
+		},
+		{
+			image: './LadyExploreCard.png',
+			title: 'Skin Care Routine',
+			subTitle: 'Glass Skin',
+			exploreLink: "",
+
+		},
+
+	];
 
 	return (
 
@@ -58,47 +94,72 @@ const Routines = () => {
 				</div>
 				<button className="bg-[--primary] text-white py-2 px-4 rounded-lg w-[70%] md:w-[50%]" onClick={() => setIsPopupOpen(true)}>Create a routine +</button>
 			</div>
-			
+
 			<CreateRoutinePopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
 
-			
 
-				<HeadingDiv title="Routines">
 
-					<div className="p-4 border-y-2 border-slate-200  ">
-						<h2 className="text-xl font-semibold text-black ">Today's Routines</h2>
-						<p className="text-gray-500 mb-4">You have 4 Routines remaining for the day</p>
-						{todayRoutines.map((routine, index) => (
-							<div key={index} className="flex justify-between items-center mb-4">
-								<div className='flexClass'>
+			<HeadingDiv title="Routines">
 
-									<img src={routine.image} alt="" className='mr-4' />
+				<div className="p-4 border-y-2 border-slate-200  ">
+					<h2 className="text-xl font-semibold text-black ">Today's Routines</h2>
+					<p className="text-gray-500 mb-4">You have 4 Routines remaining for the day</p>
+					{todayRoutines.map((routine, index) => (
+						<div key={index} className="flex justify-between items-center mb-4 ">
+							<div className='flexClass'>
 
-									<div className=" flex justify-start items-start flex-col">
-										<h3 className="text-lg font-semibold mr-4">{routine.title}</h3>
-										<p className="text-sm text-gray-500">{routine.type} &nbsp;  {routine.time}</p>
-									</div>
+								<img src={routine.image} alt="" className='mr-4' />
 
+								<div className=" flex justify-start items-start flex-col">
+									<h3 className="text-sm md:text-lg font-semibold mr-4">{routine.title}</h3>
+									<p className="text-sm text-gray-500">{routine.type} &nbsp;  {routine.time}</p>
 								</div>
-								<div className="flexClass">
-									<span className=" text-sm font-semibold py-1 px-3 rounded-lg mr-4">{routine.progress} 🌻</span>
-									<span className=" text-sm font-semibold py-1 px-3 rounded-lg"><img src="./rightArrow.svg" alt="" className='icons ' /></span>
-								</div>
+
 							</div>
+							<div className="flex justify-center items-center flex-col md:flex-row">
+								<span className=" text-sm font-semibold py-1  rounded-lg md:mr-4 ">{routine.progress} 🌻</span>
+								<span className=" text-sm font-semibold py-1  rounded-lg"><img src="./rightArrow.svg" alt="" className='w-[20px] h-auto ' /></span>
+							</div>
+						</div>
+					))}
+					<p className="text-gray-500 cursor-pointer w-full flex justify-between items-center"><span>More Routines (2)</span> <span><img src="./downArrow.svg" alt="" className='w-[20px] h-auto' /></span></p>
+				</div>
+
+				<div className='p-4 '>
+					<h2 className="text-xl font-semibold text-black mb-4">My Routine</h2>
+					<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:justify-start ">
+						{myRoutines.map((routine, index) => (
+							<RoutineCard key={index} {...routine} />
 						))}
-						<p className="text-green-700 cursor-pointer">More Routines (2)</p>
+					</div>
+				</div>
+				<div className="p-4  w-full ">
+
+					<div className="flex justify-between items-center mb-6 w-full ">
+						<h1 className="text-2xl font-semibold text-gray-800">Explore</h1>
+						<button className="text-green-700 hover:underline">See More</button>
 					</div>
 
-					<div className='p-4 '>
-						<h2 className="text-xl font-semibold text-black mb-4">My Routine</h2>
-						<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:justify-start">
-							{myRoutines.map((routine, index) => (
-								<RoutineCard key={index} {...routine} />
-							))}
-						</div>
+					<div className="flex mb-6 flex-wrap justify-start items-start">
+						<button className="bg-[#E7F5E7] text-green-700 px-4 py-2 rounded-xl m-1">All Routines</button>
+						<button className="border-2 border-slate-200 text-gray-700 px-4 py-2 rounded-xl m-1">Created by Dr.</button>
+						<button className="border-2 border-slate-200 text-gray-700 px-4 py-2 rounded-xl m-1">Created by me</button>
+						<button className="border-2 border-slate-200 text-gray-700 px-4 py-2 rounded-xl m-1">Imported Template</button>
 					</div>
-					<RoutineExplore />
-				</HeadingDiv>
+
+					<div className="flex gap-3 justify-center items-center mb-6 flex-wrap md:justify-start">
+						{exploreNow.map((card, index) => (
+							<ExploreNowCard key={index} {...card} />
+						))}
+					</div>
+
+					<div className=" flex  justify-center items-center mb-6  md:justify-start ">
+						{skinCare.map((card, index) => (
+							<SkinCareCard key={index} {...card} />
+						))}
+					</div>
+				</div>
+			</HeadingDiv>
 		</Layout>
 	);
 };

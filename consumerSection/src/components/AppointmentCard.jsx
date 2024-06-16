@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 const AppointmentCard = ({ doctor, status }) => (
-    <div className="max-w-[300px] rounded-xl overflow-hidden border m-4 p-5">
+    <div className="w-full max-w-[300px] rounded-xl overflow-hidden border m-4 p-5">
         <img className="w-full border-2 p-2 rounded-xl" src={doctor.image} alt={`Dr. ${doctor.name}`} />
         <div className=" py-4 flex justify-center items-center flex-col">
             <div className="font-bold text-xl mb-2">Dr. {doctor.name}</div>

@@ -18,12 +18,16 @@ const ChatList = ({ contacts, onSelect, isHidden }) => {
             className="flex items-center mb-4 cursor-pointer py-3"
             onClick={() => onSelect(contact)}
           >
-            <img
-              src={contact.image}
-              alt={contact.name}
-              className="h-9 w-9 rounded-full mr-4"
-            />
-            <div className="flex-1 flex justify-between items-start">
+            <div className="relative">
+              {contact.isActive && <div className="absolute left-[55%] w-[13px] h-[13px] bg-[--primary] rounded-full border-2 border-white "></div>}
+              
+              <img
+                src={contact.image}
+                alt={contact.name}
+                className="h-12 w-12 rounded-full mr-4"
+              />
+            </div>
+            <div className="flex-1 flex justify-between items-start border-b py-1">
               <div className="flex justify-start items-start flex-col">
                 <h4 className="font-semibold text-sm">{contact.name}</h4>
                 <p className="text-sm text-gray-500 truncate">{contact.message}</p>

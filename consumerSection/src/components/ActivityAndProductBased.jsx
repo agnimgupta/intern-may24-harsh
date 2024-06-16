@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from './Layout';
 import HeadingDiv from './HeadingDiv';
 import InputBox from './InputBox';
+import SimpleDropDownComponent from './SimpleDropDown';
 const ActivityAndProductBased = ({ type, onNext, activityDetails, setActivityDetails, onBack }) => {
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -21,66 +22,32 @@ const ActivityAndProductBased = ({ type, onNext, activityDetails, setActivityDet
 
 					<div className="flex w-[100%] justify-start items-start flex-col xl:flex-row">
 
-						<div className="flex justify-start items-start w-[100%]  md:w-[50%]  flex-col ">
+						<div className="flex justify-start items-start w-[100%]  md:w-[100%]  flex-col md:m-3">
 
-							<div className='w-[90%] mb-5 '>
-								<label className="block text-sm mb-2"> {type === 'Product based' ? 'Product Name' : 'Activity Name'}</label>
-
-								<input
-									type="text"
-									name="name"
-									value={activityDetails.name}
-									onChange={handleChange}
-									className="border rounded-lg w-full p-2 outline-none"
-								/>
-								
+							<div className='w-full mb-5 '>
+								<SimpleDropDownComponent label={type === 'Product based' ? 'Product Name' : 'Activity Name'} />
 							</div>
 
-							<div className="grid grid-cols-2 gap-2  w-[90%] mb-5">
-								<div>
-									<label className="block text-sm mb-2">{type === 'Product based' ? 'Quantity' : 'Goal'}</label>
-									<input
-										type="number"
-										name="goal"
-										value={activityDetails.goal}
-										onChange={handleChange}
-										className="border rounded-lg w-full p-2 outline-none"
-									/>
-								</div>
+							<div className="grid grid-cols-2 gap-2  w-full mb-5">
+									
+								<InputBox label={type === 'Product based' ? 'Quantity' : 'Goal'}/>
+								<InputBox label="Unit"/>
 
-								<div>
-									<label className="block text-sm mb-2">Unit</label>
-									<input
-										type="text"
-										name="unit"
-										value={activityDetails.unit}
-										onChange={handleChange}
-										className="border rounded-lg w-full p-2 outline-none"
-									/>
-								</div>
+								
 							</div>
 
 
 						</div>
 
-						<div className="flex justify-start items-start w-[100%]  md:w-[50%]  flex-col min-h-[30vh]  md:min-h-[40vh]">
+						<div className="flex justify-start items-start w-[100%]  md:w-[100%]  flex-col  md:m-3 ">
 
-							<div className='w-[90%] mb-5'>
-								<div>
-									<label className="block text-sm mb-2">{type === 'Product based' ? 'Product Type' : 'Activity Type'}</label>
-									<input
-										type="text"
-										name="type"
-										value={activityDetails.type}
-										onChange={handleChange}
-										className="border rounded-lg w-full p-2 outline-none"
-									/>
-								</div>
+							<div className='w-[100%] mb-5'>
+							<SimpleDropDownComponent label={type === 'Product based' ? 'Product Type' : 'Activity Type'} />
+
 							</div>
 
 
 							<div className="mb-5">
-								<label className="block text-sm mb-2">Frequency</label>
 								<div className="flex items-center">
 									<input
 										type="radio"

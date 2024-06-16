@@ -5,7 +5,7 @@ import Layout from './Layout';
 const ReminderItems = ({ onSelectType }) => {
     return (
 
-        <div className='w-[100%]  2xl:w-[70%]  flex justify-center items-center flex-col'>
+        <div className='w-[100%]   flex justify-center items-center flex-col'>
 
             <RoutineInfo width="w-[100%]" heading="what are Reminder Items? " content='"Reminder items could be products or activities that you want to remember to do at specific times or intervals. They help you stay organized and on track with your routine by prompting you when it s time to complete a particular task."' />
 

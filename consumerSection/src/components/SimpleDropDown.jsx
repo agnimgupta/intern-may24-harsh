@@ -15,12 +15,11 @@ function classNames(...classes) {
 export default function SimpleDropDownComponent({
   label,
   list,
-  mdWidth,
   placeholder,
 }) {
   const [selected, setSelected] = useState();
   return (
-    <Menu as="div" className={`relative inline-block text-left md:${mdWidth}`}>
+    <Menu as="div" className={`relative inline-block text-left w-full`}>
       <MenuButton className="relative w-full  rounded-[16px] border-[1.5px] border-blue-ice px-3 py-2 shadow-sm">
         <label
           htmlFor="concerns"
@@ -52,7 +51,7 @@ export default function SimpleDropDownComponent({
       >
         <MenuItems className="absolute right-0 z-30 mr-2 mt-2 w-3/5 origin-top-right rounded-md bg-white shadow-lg shadow-blue-ice ring-1 ring-blue-ice ring-opacity-5 focus:outline-none">
           <div className="py-1">
-            {list.map((item) => (
+            {list?.map((item) => (
               <MenuItem key={item}>
                 {({ focus }) => (
                   <span
